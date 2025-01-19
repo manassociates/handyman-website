@@ -368,7 +368,8 @@ section {
 }
 
 #logo img {
-    max-height: 22px;
+    height: 120px;
+    width: 326px;
     vertical-align: middle;
     margin-right: 15px;
 }
@@ -872,8 +873,9 @@ h6 {
 }
 
 .category-title {
-    font-size: 30px;
+    font-size: 37px;
     font-weight: 700;
+    margin-top: 40px;
     margin-bottom: 20px;
     text-align: center;
     color: #111;
