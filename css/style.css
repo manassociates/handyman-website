@@ -317,12 +317,14 @@ section {
 /* --------- 2.1 Header --------- */
 
 #header {
-    height: 71px !important;
+    height: 121px !important;
     overflow: visible;
     z-index: 9999;
     width: 100%;
     position: absolute !important;
 }
+
+
 
 #header .row {
     padding: 0;
@@ -330,6 +332,9 @@ section {
 
 #header aside {
     text-align: right;
+    line-height: 71px; /* Match header height */
+    height: 71px;
+    padding: 0;
 }
 
 #header ul {
@@ -345,9 +350,12 @@ section {
 /* --------- 2.2 Logo ---------- */
 
 #logo {
+    background: transparent;
+    position: relative;
+    z-index: 2; /* Place logo above other elements */
     float: left;
     height: 71px;
-    line-height: 66px;
+    line-height: 71px;
     margin-right: 15px;
 }
 
@@ -368,10 +376,13 @@ section {
 }
 
 #logo img {
-    height: 120px;
-    width: 326px;
+    height: auto; /* Remove fixed height */
+    max-height: 120px; /* Set a max-height instead */
+    width: auto; /* Remove fixed width */
+    max-width: 326px; /* Set a max-width instead */
     vertical-align: middle;
     margin-right: 15px;
+    object-fit: contain; /* This ensures the image maintains its proportions */
 }
 
 #navigation-logo {
@@ -502,7 +513,6 @@ section {
 
 #header nav ul {
     text-transform: uppercase;
-
 }
 
 #header nav a {
@@ -513,13 +523,34 @@ section {
 }
 
 #header nav a:hover {
-    opacity: 0.6;
+    color: #ffaf33;
 }
 
-/*Navigation Solid*/
+/* Center the main navigation */
+#nav-main {
+    display: inline-block;
+    line-height: 121px; /* Match header height */
+    height: 121px;
+}
+
+#nav-main ul {
+    margin: 0;
+    padding: 0;
+    line-height: 121px; /* Match header height */
+}
+
+#nav-main li {
+    line-height: 121px; /* Match header height */
+    margin: 0 5px;
+}
+
+#nav-main a {
+    line-height: 121px; /* Match header height */
+    padding: 0 10px;
+}
 
 #header.nav-solid [class*='col-'] {
-    padding: 0 20px;
+    padding: 3px 20px;
 }
 
 #header.nav-solid {
@@ -700,7 +731,15 @@ nav#nav-mobile a:hover {
 }
 
 #header .social-icons {
-    margin-top: 27px;
+    /* margin-top: 27px; */
+    margin: 0;
+    padding: 0;
+    line-height: 12 1px; /* Match header height */
+}
+
+#header .social-icons li {
+    line-height: 121px; /* Match header height */
+    margin: 0 5px;
 }
 
 /* --------- 2.6 Images ---------- */
@@ -864,7 +903,8 @@ h6 {
 
 /* Services Section Styles */
 #services {
-    padding: 80px 0;
+    padding-top: 130px;
+    padding-bottom: 40px;
 }
 
 .service-category {
@@ -1152,7 +1192,8 @@ blockquote {
 
 /* Gallery Section Styles */
 #gallery {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 40px;
     background-color: #f5f5f5;
 }
 
@@ -1497,7 +1538,7 @@ blockquote {
 }
 
 /* handling phones and small screens */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
     .featherlight .featherlight-content {
         /* dimensions: maximize lightbox with for small screens */
         margin-left: 10px;
@@ -1588,7 +1629,7 @@ blockquote {
 }
 
 /* Always display arrows on touch devices */
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 1280px) {
     .featherlight-next:hover,
     .featherlight-previous:hover {
         background: none;
@@ -1601,7 +1642,7 @@ blockquote {
 }
 
 /* handling phones and small screens */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
     .featherlight-next,
     .featherlight-previous {
         top: 10px;
@@ -2427,7 +2468,19 @@ blockquote {
 
 /* =Media Queries for Nav
 ===============================*/
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1280px) {
+    #header {
+        background: transparent !important; /* Force transparent background */
+    }
+    
+    #header.nav-solid {
+        background: #fff !important; /* Only solid background when nav is solid */
+    }
+    
+    nav#nav-mobile ul {
+        margin-top: 20px; /* Add some space between logo and mobile menu */
+    }
+
     #nav-trigger {
         display: block;
     }
@@ -2625,7 +2678,7 @@ blockquote {
 
 /* Landscape Tablet to Desktop
 ===============================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1280px) {
 
     #wrapper {
         margin:0;
@@ -2720,7 +2773,8 @@ blockquote {
 }
 
 #about {
-    padding: 80px 0;
+    padding-top: 130px;
+    padding-bottom: 40px;
 }
 
 .about-quality-container {
@@ -2776,7 +2830,8 @@ blockquote {
 }
 
 #choose {
-    padding: 80px 0;
+    padding-top: 130px;
+    padding-bottom: 40px;
     background-color: #f5f5f5;
 }
 
@@ -2791,7 +2846,7 @@ blockquote {
 }
 
 .choose-item i {
-    color: #d2b356;
+    color: #ffaf33;
     margin-right: 25px;  /* Increased spacing between icon and text */
     font-size: 32px;    /* Made icons bigger */
 }
@@ -2805,7 +2860,8 @@ blockquote {
 }
 
 #contactus {
-    padding: 80px 0;
+    padding-top: 130px;
+    padding-bottom: 40px;
     background-color: #f5f5f5;
 }
 
@@ -2853,12 +2909,12 @@ blockquote {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: #d2b356;
+    border-color: #ffaf33;
     outline: none;
 }
 
 .submit-btn {
-    background-color: #d2b356;
+    background-color: #ffaf33;
     color: white;
     padding: 12px 30px;
     border: none;
@@ -2870,7 +2926,7 @@ blockquote {
 }
 
 .submit-btn:hover {
-    background-color: #d2b356;
+    background-color: #ffaf33;
 }
 
 /* Contact Info Styles */
@@ -2892,7 +2948,7 @@ blockquote {
 }
 
 .info-item i {
-    color: #d2b356;
+    color: #ffaf33;
 }
 
 .info-item:last-child {
@@ -2919,7 +2975,7 @@ blockquote {
 }
 
 .info-item a:hover {
-    color: #d2b356;
+    color: #ffaf33;
 }
 
 /* Responsive Design */
