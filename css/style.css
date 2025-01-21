@@ -2616,7 +2616,7 @@ blockquote {
 
 
     .row {
-        padding: 15px 0 !important;
+        padding: 15px !important;
     }
 
     .col-1, .col-2, .col-5, .col-7, .col-9, .col-11, .col-2-3, .col-3-4, .col-61, .col-38, .col-50, .row {
@@ -2784,6 +2784,8 @@ blockquote {
 #about {
     padding-top: 130px;
     padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .about-quality-container {
