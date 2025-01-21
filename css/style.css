@@ -1014,42 +1014,12 @@ h6 {
 }
 
 /* Hover Effects */
-/* .service-box:hover .service-description {
+.service-box:hover .service-description {
     opacity: 1;
 }
 
 .service-box:hover .service-title {
     opacity: 0;
-} */
-/* Hover Effects for Desktop */
-@media (hover: hover) {
-    .service-box:hover .service-description {
-        opacity: 1;
-    }
-    
-    .service-box:hover .service-title {
-        opacity: 0;
-    }
-}
-
-/* Touch Device Handling */
-@media (hover: none) {
-    .service-box:active .service-description {
-        opacity: 1;
-    }
-    
-    .service-box:active .service-title {
-        opacity: 0;
-    }
-    
-    /* Add a class for touched state */
-    .service-box.touched .service-description {
-        opacity: 1;
-    }
-    
-    .service-box.touched .service-title {
-        opacity: 0;
-    }
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -2688,6 +2658,30 @@ blockquote {
         font-size: 13px;
         line-height: 1.2;
     }
+
+    #choose {
+        padding-top: 60px;
+    }
+    
+    .choose-text {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    .choose-item i {
+        font-size: 18px;
+        margin-right: 12px;
+    }
+    .choose-item {
+        padding-right: 8px;
+    }
+    
+    .section-heading h3 {
+        font-size: 11px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
 }
 
 /* Mobile to Tablet Portrait
@@ -2781,6 +2775,26 @@ blockquote {
         width: 50%;
     }
 
+    .choose-text {
+        font-size: 18px;
+        letter-spacing: 0.6px;
+    }
+    .choose-item i {
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    .choose-item {
+        padding-right: 10px;
+    }
+    
+    .section-heading h3 {
+        font-size: 12px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+
 }
 
 /* Landscape Tablet to Desktop
@@ -2834,6 +2848,23 @@ blockquote {
         height: 432px !important;
     }
 
+    .choose-text {
+        font-size: 20px;
+        letter-spacing: 0.8px;
+    }
+    .choose-item i {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+}
+
+/* Make text spaces slightly narrower on smaller screens */
+@media (min-width: 1281px) {
+    .choose-text {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
 }
 
 /* Responsive Design */
@@ -2866,6 +2897,16 @@ blockquote {
         flex: 0 0 calc(50% - 15px); /* 50% width for 2 items per row on mobile */
         max-width: calc(50% - 15px);
         height: 180px;
+    }
+
+    .choose-text {
+        font-size: 20px;
+    }
+    
+    .choose-item i {
+        font-size: 24px;
+        margin-right: 20px;
+        min-width: 24px;
     }
 }
 
@@ -2941,20 +2982,30 @@ blockquote {
     margin: 22px 0;  /* Increased vertical spacing between items */
     display: flex;
     align-items: center;
+    padding-right: 15px;
 }
 
 .choose-item i {
     color: #ffaf33;
     margin-right: 25px;  /* Increased spacing between icon and text */
     font-size: 32px;    /* Made icons bigger */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    min-width: 32px; /* Ensure consistent width */
+    display: flex; /* Added to ensure icon is properly centered */
+    align-items: center; /* Center icon vertically */
 }
 
 .choose-text {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     color: #111;
     letter-spacing: 1px;
+    white-space: pre-wrap; /* Preserve the spaces */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    display: flex; /* Added to ensure text is properly centered */
+    align-items: center; /* Center text vertically */
 }
 
 #contactus {
