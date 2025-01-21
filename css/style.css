@@ -968,13 +968,19 @@ h6 {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 20px;
+    padding: 0;
     color: #111;
     font-size: 23px;
     font-weight: 700;
     text-align: center;
     z-index: 2;
     transition: opacity 0.3s ease;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
 }
 
 .service-description {
