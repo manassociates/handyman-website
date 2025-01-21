@@ -332,8 +332,8 @@ section {
 
 #header aside {
     text-align: right;
-    line-height: 71px; /* Match header height */
-    height: 71px;
+    line-height: 121px; /* Match header height */
+    height: 121px;
     padding: 0;
 }
 
@@ -354,8 +354,8 @@ section {
     position: relative;
     z-index: 2; /* Place logo above other elements */
     float: left;
-    height: 71px;
-    line-height: 71px;
+    height: 121px;
+    line-height: 121px;
     margin-right: 15px;
 }
 
@@ -550,7 +550,7 @@ section {
 }
 
 #header.nav-solid [class*='col-'] {
-    padding: 3px 20px;
+    padding: 0 20px;
 }
 
 #header.nav-solid {
@@ -598,7 +598,8 @@ section {
 #nav-trigger span {
     display: inline-block;
     width: 38px;
-    height: 71px;
+    height: 121px;
+    line-height: 121px;
     color: #111;
     cursor: pointer;
     text-transform: uppercase;
@@ -616,8 +617,8 @@ section {
     font-family: "fontAwesome";
     display: inline-block;
     width: 38px;
-    height: 71px;
-    line-height: 75px;
+    height: 121px;
+    line-height: 121px;
     text-align: center;
     content: "\f0c9";
     border-top-right-radius: 5px;
@@ -734,7 +735,7 @@ nav#nav-mobile a:hover {
     /* margin-top: 27px; */
     margin: 0;
     padding: 0;
-    line-height: 12 1px; /* Match header height */
+    line-height: 121px; /* Match header height */
 }
 
 #header .social-icons li {
@@ -2476,10 +2477,6 @@ blockquote {
     #header.nav-solid {
         background: #fff !important; /* Only solid background when nav is solid */
     }
-    
-    nav#nav-mobile ul {
-        margin-top: 20px; /* Add some space between logo and mobile menu */
-    }
 
     #nav-trigger {
         display: block;
@@ -2526,6 +2523,10 @@ blockquote {
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38, .col-50 {
         padding-right: 0;
         padding-left: 0;
+    }
+
+    .col-50 {
+        padding-top: 50px;
     }
 
     /*-----------------Header Elements-----------------*/
@@ -2593,6 +2594,14 @@ blockquote {
         display: none !important;
     }
 
+    .service-box {
+        height: 160px;
+    }
+    
+    .service-title {
+        font-size: 16px;
+    }
+
 }
 
 /* Mobile to Tablet Portrait
@@ -2617,6 +2626,10 @@ blockquote {
         width: 100%;
     }
 
+    .col-50 {
+        padding-top: 50px;
+    }
+
     .col-3, .col-4, .col-6, .col-8, .col-10, .col-12 {
         width: 50%;
     }
@@ -2629,23 +2642,31 @@ blockquote {
     #header aside {
         display: inline-block;
         position: absolute;
-        top: 40px;
-        right: 60px;
-        padding-top:3px;
+        right: 50px;
+        padding-top: 2px;
         padding-right: 5px;
     }
 
     #header.nav-solid aside {
-        top: 20px;
+        padding-top: 2px;
+        padding-right: 5px;
     }
 
     #header aside ul {
         margin-top: 0 !important;
-        padding-top: 6px;
     }
+
+    #header aside ul li {
+        margin: 0!important;
+    }
+
 
     #banner-content.row {
         padding-top: 85px !important;
+    }
+
+    #nav-trigger span:after {
+        width: 48px;
     }
 
     /*Navigation*/
@@ -2697,14 +2718,14 @@ blockquote {
     #header aside {
         display: inline-block;
         position: absolute;
-        top: 40px;
         right: 60px;
-        padding-top:3px;
+        padding-top:2px;
         padding-right: 5px;
     }
 
     #header.nav-solid aside {
-        top: 20px;
+        padding-top:2px;
+        padding-right: 5px;
     }
 
     #header aside ul {
@@ -2762,15 +2783,6 @@ blockquote {
     }
 }
 
-@media (max-width: 480px) {
-    .service-box {
-        height: 160px;
-    }
-    
-    .service-title {
-        font-size: 16px;
-    }
-}
 
 #about {
     padding-top: 130px;
