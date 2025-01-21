@@ -1197,7 +1197,7 @@ blockquote {
 
 /* Gallery Section Styles */
 #gallery {
-    padding-top: 80px;
+    padding-top: 130px;
     padding-bottom: 40px;
     background-color: #f5f5f5;
 }
@@ -1975,6 +1975,11 @@ blockquote {
     opacity: 1;
 }
 
+/* Add hover state for the arrow */
+#scrollUp:hover:before {
+    background: #ffaf33; /* Keep the same background */
+}
+
 /*Preloader*/
 
 #preloader {
@@ -2551,8 +2556,22 @@ blockquote {
         padding:0;
     }
 
-    .page-border, #scrollUp, #scrollUp:before {
+    .page-border {
         display:none;
+    }
+
+    #scrollUp {
+        bottom: 10px;
+        right: 20px;
+        width: 60px;
+        height: 70px;
+    }
+
+    #scrollUp:before {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 2em;
     }
 
     .row {
@@ -2632,11 +2651,6 @@ blockquote {
         font-size: 48px;
     }
 
-    /* Hide Elements */
-    a#scrollUp {
-        display: none !important;
-    }
-
     .service-box {
         height: 180px;
     }
@@ -2693,10 +2707,24 @@ blockquote {
         padding:0;
     }
 
-    .page-border, #scrollUp, #scrollUp:before {
+    .page-border{
         display:none;
     }
 
+    /* Adjust scroll button size for small screens */
+    #scrollUp {
+        bottom: 12px;
+        right: 25px;
+        width: 65px;
+        height: 75px;
+    }
+
+    #scrollUp:before {
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 2.2em;
+    }
 
     .row {
         padding: 15px !important;
