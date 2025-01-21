@@ -1310,7 +1310,7 @@ blockquote {
     border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .carousel-container {
         width: 90%;
         margin: 0 auto;
@@ -1629,8 +1629,8 @@ blockquote {
     }
 }
 
-/* Always display arrows on touch devices */
-@media only screen and (max-device-width: 1280px) {
+/* handling phones and small screens */
+@media only screen and (max-width: 1280px) {
     .featherlight-next:hover,
     .featherlight-previous:hover {
         background: none;
@@ -1640,10 +1640,7 @@ blockquote {
     .featherlight-previous span {
         display: block;
     }
-}
-
-/* handling phones and small screens */
-@media only screen and (max-width: 1280px) {
+    
     .featherlight-next,
     .featherlight-previous {
         top: 10px;
@@ -2762,7 +2759,7 @@ blockquote {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -2801,7 +2798,7 @@ blockquote {
 }
 
 /* Mobile styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .about-quality-container {
         flex-direction: column;
         margin-bottom: 30px;
@@ -2991,7 +2988,7 @@ blockquote {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .contact-container {
         flex-direction: column;
     }
